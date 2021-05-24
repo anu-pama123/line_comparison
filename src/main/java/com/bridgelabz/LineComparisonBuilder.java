@@ -34,8 +34,10 @@ public class LineComparisonBuilder
         {
             System.out.println("The two lines are equal");
         }
-        else {
-            System.out.println("The two lines are not equal");
+        else if (length1>length2){
+            System.out.println("first lie is greater than second line ");
+        }else {
+            System.out.println("first lie is less than second line ");
         }
     }
 }
