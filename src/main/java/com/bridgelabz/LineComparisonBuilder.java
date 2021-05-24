@@ -12,15 +12,30 @@ public class LineComparisonBuilder
     }
     public static void main(String[] arg)
     {
+        double length1, length2;
+        int x1, x2, y1, y2;
         obj = new Scanner(System.in);
         LineComparisonBuilder object=new LineComparisonBuilder();
         System.out.println("Enter the numbers x1,x2,y1,y2 ");
-        int x1, x2, y1, y2;
         x1 = obj.nextInt();
         x2 = obj.nextInt();
         y1 = obj.nextInt();
         y2 = obj.nextInt();
         object.length_of_line(x1, x2, y1, y2);
-        System.out.println("Length of line = " + object.length);
+        length1=object.length;
+        System.out.println("Enter the numbers x1,x2,y1,y2 ");
+        x1 = obj.nextInt();
+        x2 = obj.nextInt();
+        y1 = obj.nextInt();
+        y2 = obj.nextInt();
+        object.length_of_line(x1, x2, y1, y2);
+        length2=object.length;
+        if (length1 == length2)
+        {
+            System.out.println("The two lines are equal");
+        }
+        else {
+            System.out.println("The two lines are not equal");
+        }
     }
 }
